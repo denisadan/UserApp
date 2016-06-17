@@ -176,7 +176,7 @@
                     android:layout_marginRight="5dip"
                     android:background="@drawable/st_btn_edit_note" />
                 
-                <Button
+<!--                <Button
                     android:id="@+id/rc_edit_tm_highlight"
                     style="@android:style/ButtonBar"
                     android:minHeight="1dp" 
@@ -207,7 +207,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dip"
-                    android:background="@drawable/st_btn_edit_cancelline" />
+                    android:background="@drawable/st_btn_edit_cancelline" />-->
 
                 <Button
                     android:id="@+id/rc_edit_ink"

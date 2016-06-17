@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\DenisaDan\Downloads\PlugPDF\PlugPDF\userapp\build\intermediates\exploded-aar\PlugPDF\plugpdf\unspecified\jars\classes.jar"
+        jar="C:\Users\DenisaDan\Desktop\code\UserApp\PlugPDF\userapp\build\intermediates\exploded-aar\PlugPDF\plugpdf\unspecified\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="290fa396ca9fcd1eadc5126641a4f5ef48575767">
-        <dex dex="C:\Users\DenisaDan\Downloads\PlugPDF\PlugPDF\userapp\build\intermediates\pre-dexed\debug\PlugPDF-plugpdf-unspecified_db67d1c6dc891dc5dc3acf2db8fd958ae5a60c45.jar" />
+        sha1="f89b25280b4dc9e2c707981e70d0ae2ec7d059ee">
+        <dex dex="C:\Users\DenisaDan\Desktop\code\UserApp\PlugPDF\userapp\build\intermediates\pre-dexed\debug\PlugPDF-plugpdf-unspecified_29216b3a4213ed8f3dfb0f7612e07b9b8b2f2d3f.jar" />
     </item>
     <item
-        jar="C:\Users\DenisaDan\Downloads\PlugPDF\PlugPDF\userapp\build\intermediates\exploded-aar\PlugPDF\plugpdf\unspecified\jars\libs\plugpdfcore.jar"
+        jar="C:\Users\DenisaDan\Desktop\code\UserApp\PlugPDF\userapp\build\intermediates\exploded-aar\PlugPDF\plugpdf\unspecified\jars\libs\plugpdfcore.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="1a9a0b765d6a6a6390f9f41cb264213a3f1ea339">
-        <dex dex="C:\Users\DenisaDan\Downloads\PlugPDF\PlugPDF\userapp\build\intermediates\pre-dexed\debug\plugpdfcore_c546715034b9aee46f83ecf958d1831dc756c61a.jar" />
+        sha1="ac7dbc7d415e88736dd91edd50cf3fb2c1f79ce7">
+        <dex dex="C:\Users\DenisaDan\Desktop\code\UserApp\PlugPDF\userapp\build\intermediates\pre-dexed\debug\plugpdfcore_e059d235142b2d4f1522a355dcc666a773efe51c.jar" />
     </item>
 
 </items>

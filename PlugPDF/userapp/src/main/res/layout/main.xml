@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/document_view" />
-    <Button
+<!--    <Button
         android:id="@+id/document_view_without_controller_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,13 +20,13 @@
         android:id="@+id/encrypt_pdf_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/encrypt_pdf" />
+        android:text="@string/encrypt_pdf" />-->
     <Button
         android:id="@+id/merge_pdf_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/merge_pdf" />
-	<Button
+<!--	<Button
         android:id="@+id/annot_export_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,6 +35,6 @@
         android:id="@+id/extract_text_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/extract_text" />
+        android:text="@string/extract_text" />-->
 	
 </LinearLayout>
