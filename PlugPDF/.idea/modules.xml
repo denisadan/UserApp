@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PlugPDF.iml" filepath="$PROJECT_DIR$/PlugPDF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugpdf/plugpdf.iml" filepath="$PROJECT_DIR$/plugpdf/plugpdf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/userapp/userapp.iml" filepath="$PROJECT_DIR$/userapp/userapp.iml" />
+    </modules>
+  </component>
+</project>

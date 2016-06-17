@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.epapyrus.plugpdf.sample"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+
+    <application
+        tools:replace="icon, label"
+        android:name="com.epapyrus.plugpdf.sample.PlugPDFLauncherApplication"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@drawable/ic_launcher"
+
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.epapyrus.plugpdf.sample.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.epapyrus.plugpdf.sample.PDFListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/pdf_list"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.epapyrus.plugpdf.sample.annotExport.PDFListWithAnnotExportFeatureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/annot_export"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.epapyrus.plugpdf.sample.documentView.ReaderWithControllerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/document_view"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.epapyrus.plugpdf.sample.documentViewWithoutController.ReaderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/document_view_without_controller"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.epapyrus.plugpdf.sample.encryptPDF.PDFListWithEncryptFeatureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/encrypt_pdf"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.epapyrus.plugpdf.sample.mergePDF.PDFListWithMergeFeatureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/merge_pdf"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.epapyrus.plugpdf.sample.extractText.PDFListWithExtractTextFeatureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/merge_pdf"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
+
+</manifest>

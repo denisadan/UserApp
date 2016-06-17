@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\DenisaDan\Downloads\PlugPDF\PlugPDF\userapp\build\intermediates\exploded-aar\PlugPDF\plugpdf\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="290fa396ca9fcd1eadc5126641a4f5ef48575767">
+        <dex dex="C:\Users\DenisaDan\Downloads\PlugPDF\PlugPDF\userapp\build\intermediates\pre-dexed\debug\PlugPDF-plugpdf-unspecified_db67d1c6dc891dc5dc3acf2db8fd958ae5a60c45.jar" />
+    </item>
+    <item
+        jar="C:\Users\DenisaDan\Downloads\PlugPDF\PlugPDF\userapp\build\intermediates\exploded-aar\PlugPDF\plugpdf\unspecified\jars\libs\plugpdfcore.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1a9a0b765d6a6a6390f9f41cb264213a3f1ea339">
+        <dex dex="C:\Users\DenisaDan\Downloads\PlugPDF\PlugPDF\userapp\build\intermediates\pre-dexed\debug\plugpdfcore_c546715034b9aee46f83ecf958d1831dc756c61a.jar" />
+    </item>
+
+</items>
