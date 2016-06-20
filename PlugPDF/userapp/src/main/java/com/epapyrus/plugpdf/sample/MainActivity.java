@@ -1,100 +1,103 @@
-/*
- * Copyright (C) 2013 ePapyrus, Inc. All rights reserved.
- *
- * This file is part of the PlugPDF Sample Project whose source code is provided to show how to
- * use the PlugPDF SDK.
- */
-
 package com.epapyrus.plugpdf.sample;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.TextView;
 
-import com.epapyrus.plugpdf.sample.mergePDF.PDFListWithMergeFeatureActivity;
 
 /**
- * This is the PlugPDF Sample Project's Main {@link Activity}
- * <p/>
- * Creates the main view, and implements {@link OnClickListener}
- *
- * @author ePapyrus
- * @see <a href="http://www.plugpdf.com">http://www.plugpdf.com</a>
+ * A login screen that offers login via email/password.
  */
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends Activity {
 
-    /**
-     * Sets the activity content, creating the layout buttons and adding some click listeners
-     *
-     * @param savedInstanceState The activity's saved instance state.
-     * @see android.app.Activity#onCreate(android.os.Bundle)
-     */
+    private TextView userField;
+    private TextView passField;
+    private TextView userErrorTextField;
+    private TextView passErrorTextField;
+    private TextView succesLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_login);
 
-        Button documentViewBtn = (Button) findViewById(R.id.document_view_btn);
-        Button mergePDFpathBtn = (Button) findViewById(R.id.merge_pdf_btn);
+        userField = (TextView) findViewById(R.id.userTextField);
+        passField = (TextView) findViewById(R.id.passTextField);
+        userErrorTextField = (TextView) findViewById(R.id.userErrorTextField);
+        passErrorTextField = (TextView) findViewById(R.id.passErrorTextField);
+        succesLogin = (TextView) findViewById(R.id.succesId);
 
-/*		Button documentViewWithoutControllerBtn = (Button) findViewById(R.id.document_view_without_controller_btn);
-        Button encryptPDFBtn = (Button) findViewById(R.id.encrypt_pdf_btn);
-		Button annotExportBtn = (Button) findViewById(R.id.annot_export_btn);
-		Button extractTextBtn = (Button) findViewById(R.id.extract_text_btn)*/
-        ;
-
-        documentViewBtn.setOnClickListener(this);
-        mergePDFpathBtn.setOnClickListener(this);
-
-/*		documentViewWithoutControllerBtn.setOnClickListener(this);
-		encryptPDFBtn.setOnClickListener(this);
-		annotExportBtn.setOnClickListener(this);
-		extractTextBtn.setOnClickListener(this);*/
     }
 
-    /**
-     * Starts an activity when the corresponding button is clicked.
-     *
-     * @param v The view that was clicked
-     */
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
+    public void loginClicked(View view) {
 
-        Intent intent = null;
+        boolean userOk = false, passOk = false;
 
-        switch (id) {
-            case R.id.document_view_btn: // Shows the PDF with ReaderView
-                intent = new Intent(this, PDFListActivity.class);
-                intent.putExtra("TYPE", "READER");
-                break;
+        if (!verifyNullUserField(userField.getText().toString())) {
+            userErrorTextField.setText("Username cannot be null");
 
-            case R.id.merge_pdf_btn: // Merge PDF
-                intent = new Intent(this, PDFListWithMergeFeatureActivity.class);
-                intent.putExtra("TYPE", "MERGE_PDF");
-                break;
-		/*case R.id.document_view_without_controller_btn: // Shows the PDF with SimpleReaderView
-			intent = new Intent(this, PDFListActivity.class);
-			intent.putExtra("TYPE", "READER_WITHOUT_CONTROLLER");
-			break;
-		case R.id.encrypt_pdf_btn: // Encrypt PDF
-			intent = new Intent(this, PDFListWithEncryptFeatureActivity.class);
-			intent.putExtra("TYPE", "ENCRYPT_PDF");
-			break;
+        } else if (!verifylenghtUserField(userField.getText().toString())) {
+            userErrorTextField.setText("Username  too short");
 
-		case R.id.annot_export_btn: // Annotation export/import
-			intent = new Intent(this, PDFListWithAnnotExportFeatureActivity.class);
-			intent.putExtra("TYPE", "ANNOT_EXPORT");
-			break;
-		case R.id.extract_text_btn: // Extract text
-			intent = new Intent(this, PDFListWithExtractTextFeatureActivity.class);
-			intent.putExtra("TYPE", "EXTRACT_TEXT");
-			break;
-		}*/
+        } else if (verifyUser(userField.getText().toString())) {
+            userErrorTextField.setText("");
+            userOk = true;
+        } else {
+            userOk = false;
+            userErrorTextField.setText("invalid");
         }
-        startActivity(intent);
+
+
+        if (!verifyNullPassField(passField.getText().toString())) {
+            passErrorTextField.setText("Password cannot be null");
+
+        } else if (!verifyLengthPassField(passField.getText().toString())) {
+            passErrorTextField.setText("Pasword too short");
+
+        } else if (verifyPass(passField.getText().toString())) {
+            passErrorTextField.setText("");
+            passOk = true;
+        } else {
+            passOk = false;
+            passErrorTextField.setText("invalid");
+        }
+
+        if (passOk && userOk) {
+            succesLogin.setText("Succes Login");
+            Intent intent = new Intent(this, MainMenuActivity.class);
+            startActivity(intent);
+        }
+
+    }
+
+    public boolean verifyNullUserField(String username) {
+        return username.length() != 0;
+    }
+
+    public boolean verifyNullPassField(String pass) {
+        return pass.length() != 0;
+    }
+
+    public boolean verifylenghtUserField(String username) {
+        return username.length() >= 4;
+    }
+
+    public boolean verifyLengthPassField(String pass) {
+        return pass.length() >= 4;
+    }
+
+    public boolean verifyUser(String username) {
+
+        return username.equals("1234");
+    }
+
+    public boolean verifyPass(String pass) {
+
+        return pass.equals("1234");
     }
 }
+
+
+
